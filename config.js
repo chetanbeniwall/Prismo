@@ -41,7 +41,7 @@ module.exports = {
         PrimaryColor: "#2b2d31",
         ErrorColor: "#ff0000",
         SuccessColor: "#66f0b1",
-        emoji: {
+         emoji: {
             prismoemo: "<:prismo:1106917452165697546>",
             invite: "<:pr_invitee:1121823864599617616>",
             support: "<:pr_supportticon:1121823895905898548>",
@@ -90,7 +90,6 @@ module.exports = {
             memberadd: "<:icons_invite:1098547169704812587>",
             star: "<:icons_star:859388127880544296>",
             guide: "<:pr_guidee:1122070815698075691>",
-        },
         serverId: process.env.DISCORD_SERVER_ID || "",
         roleIds: {
             ownerRoleId: "",
