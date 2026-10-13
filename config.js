@@ -5,16 +5,18 @@ module.exports = {
         totalClusters: "auto",
     },
     Client: {
-        Token: "",
+        Token: process.env.DISCORD_TOKEN || "",
         Prefix: ".",
-        VanityGuardToken: "",
-        botId: "",
-        botSecret: "",
-        TopGG: "",
+        VanityGuardToken: process.env.VANITYGUARD_TOKEN || "",
+        botId: process.env.DISCORD_CLIENT_ID || "",
+        botSecret: process.env.DISCORD_CLIENT_SECRET || "",
+        TopGG: process.env.TOPGG_TOKEN || "",
         DefaultPermissions: ["SendMessages", "EmbedLinks", "ReadMessageHistory"],
         DefaultUsersPermissions: ["SendMessages"],
-        Owners: [],
-        VanityGuard: "",
+        Owners:  process.env.OWNER_IDS
+    ? process.env.OWNER_IDS.split(",").map(id => id.trim()).filter(Boolean)
+    : [],
+        VanityGuard: process.env.VANITYGUARD_ID || "",
         QuiteJsk: [""],
         OpenAIApi: "",
         LogsChannel: "",
@@ -89,7 +91,7 @@ module.exports = {
             star: "<:icons_star:859388127880544296>",
             guide: "<:pr_guidee:1122070815698075691>",
         },
-        serverId: "",
+        serverId: process.env.DISCORD_SERVER_ID || "",
         roleIds: {
             ownerRoleId: "",
             communityManagerRoleId: "",
@@ -104,10 +106,10 @@ module.exports = {
         },
     },
     Database: {
-        Uri: "",
+        Uri: process.env.MONGODB_URI || "",
     },
     Webhook: {
-        Url: "",
+        Url: process.env.LOG_WEBHOOK_URL || "",
     },
     Url: {
         InviteURL: "",
