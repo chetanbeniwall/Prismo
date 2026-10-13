@@ -181,8 +181,8 @@ module.exports = class GiveawayManager {
             });
             giveaway.setMessageId(message.id);
             this.giveaways.push(giveaway);
-            await message.react(giveaway.reaction).catch(async (err) => {
-                await message.react(this.client.config.Client.emoji.giveaway2);
+         await message.react("🎉").catch((err) => {
+                console.error("Failed to add giveaway reaction:", err);
                 giveaway.reaction = "1121823929204482148";
             });
             await this.saveData(giveaway);
