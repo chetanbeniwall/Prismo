@@ -18,8 +18,8 @@ module.exports = {
     : [],
         VanityGuard: process.env.VANITYGUARD_ID || "",
         QuiteJsk: [""],
-        OpenAIApi: "",
-        LogsChannel: "",
+        OpenAIApi:  process.env.OPENAI_API_KEY || "",
+        LogsChannel: process.env.LOGS_CHANNEL_ID || "",
         Emojis: {
             Flags: {
                 BugHunter1: "<:bug_hunter_level_1:1026802184244973578>",
