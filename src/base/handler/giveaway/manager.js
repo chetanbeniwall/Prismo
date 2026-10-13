@@ -176,7 +176,7 @@ module.exports = class GiveawayManager {
             await this.saveData(giveaway);
             const embed = await this.mainEmbed(giveaway);
             const message = await channel.send({
-                content: `${this.client.config.Client.emoji.gift} **GIVEAWAY STARTED** ${this.client.config.Client.emoji.gift}`,
+                content: "🎉 **GIVEAWAY STARTED** 🎉",
                 embeds: [embed],
             });
             giveaway.setMessageId(message.id);
