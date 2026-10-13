@@ -115,4 +115,4 @@ module.exports = {
         SupportURL: "https://discord.gg/QX3YKQTrzQ",
         GuideURL: "https://docs.prismo.one",
     },
-};
+}};
